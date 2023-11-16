@@ -1,11 +1,10 @@
 import React from 'react'
 
-function Skill(props) {
+function Skill({skillObject}) {
   return (
-    <div className='skill' style={{backgroundColor: props.color}}>
-        <span>{props.skill}</span>
-        <span>{props.emoji}</span>
-    </div>
+    <li className='skill' style={{backgroundColor: skillObject.color}}>
+      <span>{skillObject.name}</span>
+    </li>
   )
 }
 

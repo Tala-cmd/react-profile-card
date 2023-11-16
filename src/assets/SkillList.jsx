@@ -1,15 +1,44 @@
 import React from 'react'
 import Skill from './Skill'
-function SkillList(props) {
+const skills = [
+  {
+  name: 'HTML',
+  level: 'advanced',
+  color:'#E44D26'
+  },
+  {
+  name: 'CSS',
+  level: 'advanced',
+  color: '#1572B6'
+  },
+  {
+  name: 'JavaScript',
+  level: 'intermediate',
+  color: '#F7DF1E'
+  },
+  {
+  name: 'React.js',
+  level: 'beginner',
+  color: '#61DAFB'
+  },
+  {
+  name: 'Git & Github',
+  level: 'intermediate',
+  color: '#6D42A3'
+  },
+  {
+  name: 'Web Design',
+  level: 'intermediate',
+  color: '#E74C3C'
+  }
+]
+
+function SkillList() {
   return (
-    <div className='skill-list'>
-      <Skill skill='HTML' emoji='📄' color='#E44D26' />
-      <Skill skill='CSS' emoji='🎨' color='#1572B6'/>
-      <Skill skill='JavaScript' emoji='💻' color='#F7DF1E'/>
-      <Skill skill='React.js' emoji='⚛️' color='#61DAFB'/>
-      <Skill skill='Git & Github' emoji='🛠️' color='#6D42A3'/>
-      <Skill skill='Web Design' emoji='🌐' color='#E74C3C'/>
-    </div>
+    <ul className='skill-list'>
+      {skills.map((skill) =>
+      <Skill skillObject={skill} key={skill.name} /> )}
+    </ul>
   )
 }
 
