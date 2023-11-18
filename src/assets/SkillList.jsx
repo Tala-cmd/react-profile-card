@@ -14,7 +14,7 @@ const skills = [
   {
   name: 'JavaScript',
   level: 'intermediate',
-  color: '#F7DF1E'
+  color: '#ffec80d2'
   },
   {
   name: 'React.js',
